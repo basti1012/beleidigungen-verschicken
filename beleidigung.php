@@ -13,7 +13,7 @@ function sanitizeString($str) {
     return $str;
 }
   */
-$link_beleidigung='https://basti1012.bplaced.net/testordner_privat/beleidigen/beleidigung.php';
+$link_beleidigung='https://beispiel.de/beleidigung.php';
 $filename = 'badword.txt';          
 $daten = array(); 
 $sammeln1=[]; 
@@ -277,8 +277,6 @@ Array.prototype.random = function () {
 wer=wert_wurde_beleidigt;
 $('#werwude').html(wer);
 
-
-
 von=wer_beleidigt;
  $('#vonwem').html(von);
 menge=menge_beleidigt;
@@ -293,11 +291,9 @@ $('#generate').click(function(){
     na=$('#beleiname').val();
     me=$('#menge').val();
     we=$('#wer').val();
-//    lin='https://basti1012.bplaced.net/admin/noch_testen/bekeidigen.php?name=Beleidigungen_veschicken.php&name1='+na+'&menge='+me+'&wer='+we+'';
     lin='<?php echo $link_beleidigung; ?>?name1='+na+'&menge='+me+'&wer='+we+'';
     $('#linkout').html('<a href="'+lin+'">'+lin+'</a>')
   })
-  
 "use strict";
 var supportMsg = document.getElementById('linkout');
 if ('speechSynthesis' in window) {
@@ -310,7 +306,6 @@ function loadVoices() {
     var voices = speechSynthesis.getVoices();
 }
 loadVoices();
- 
 function sprich(h){
    var text=arr[h];
    $('#wortout').html($('#werwude').html()+' du '+text);
@@ -327,7 +322,6 @@ function sprich(h){
         }
         speak(text);
     }
- 
     var obj = document.getElementById('mouth');
     obj.addEventListener('touchstart', function(event) {
           weiter(1,1);
@@ -378,7 +372,6 @@ function sprich(h){
            clearTimeout(timer);
      }
 }
-
 </script>
 </body>
 </html>
